@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--
+    Menapilkan gambar untuk backgroud yang diambil dari git dan layout (width dan height)
+    dengan 0 dp agar tinggi dan lebar gambar sesuai layar  selain itu menggunakan scaleType
+    centerCrop agar bentuk gambar tidak terdistrosi. untuk scale ukuran gambar menggunakan dp.
+    -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
@@ -20,6 +25,12 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/androidparty" />
 
+    <!--
+    menampilkan ucapan selamat ulang tahun yang margin startnya 16dp dan topnya juga 16dp
+    aagr letak ucapan selamat ulang tahun berda di kiri atas dan tidak akan berubah tempat
+    walupun dimensi layar berubah dan utnuk teksnya di ambil dari app/res/value/string.xml
+    agar tidak ada peringatan hardcoded. untuk secale ukuran tulisan menggunkan sp.
+    -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -33,6 +44,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--
+    menampilkan signature teks untuk pengaturanya sama seperi teksview sebelumnya bedanya pada
+    pengaturan marginnya yang menggunakan end dan bottom.
+    -->
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -48,14 +63,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <!--menampilkan tombol next yang nanti akan digunakan untuk menampilkan halaman selanjutnya-->
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="8dp"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
